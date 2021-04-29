@@ -1,11 +1,11 @@
 import random
 def jogar():
     numero_secreto = random.randrange(1, 101)
-    total_de_tentativas = 5
+    total_de_tentativas = 4
 
     mensagem_de_inicio()
 
-    for rodada in range(1, 6):
+    for rodada in range(1, 5):
         print("Tentativa {} de {} ".format(rodada, total_de_tentativas))
         chute = int(input("Diga um número de 0 a 100: "))
 
@@ -25,7 +25,7 @@ def jogar():
 
 
 def mensagem_acertou():
-    print("\nParabéns, você acertou!\n")
+    print("\nPARABÉNS, VOCÊ ACERTOU!\n")
 
 
 def mensagem_maior():
@@ -37,16 +37,19 @@ def mensagem_menor():
 
 
 def mensagem_de_inicio():
-    print("*" * 54)
-    print("*                Jogo da adivinhação                 *")
-    print("*" * 54)
+    print("*" * 56)
+    print("*                 JOGO DE ADIVINHAÇÃO                  *")
+    print(f'*        Bem vindo(a) ao jogo de adivinhação!          *\n'
+          f'* Você terá {4} tentativas para acertar o número secreto *')
+    print("*" * 56)
+
 
 
 def mensagem_final(numero_secreto):
     print("O número secreto é: ", numero_secreto)
-    print("*" * 54)
-    print("*                   Fim de jogo!                     *")
-    print("*" * 54)
+    print("*" * 56)
+    print("*                    FIM DE JOGO!                      *")
+    print("*" * 56)
 
 if __name__ == '__main__':
     jogar()
